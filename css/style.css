@@ -48,7 +48,6 @@ body{
 }
 
 #score, #highScoreContainer, #nextPieceText, #directions, h1{
-	/*color: #3a3a3a;*/
 	color: #737373;
 	font-family: 'Press Start 2p', helvetica;
 	font-weight: 400;

@@ -227,7 +227,7 @@ function createNewShape(){
 			if(gameLayout[0][3]==0 && gameLayout[1][3]==0 && gameLayout[1][4]==0 &&gameLayout[1][5]==0){
 				buildJShape();
 			} else {
-				builJShape();
+				buildJShape();
 				pause();
 			}
 			break;
@@ -236,7 +236,7 @@ function createNewShape(){
 				buildLShape();
 			} else {
 				buildLShape();
-				pause;
+				pause();
 			}
 			break;
 		case 3: //O
