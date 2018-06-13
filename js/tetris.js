@@ -163,50 +163,113 @@ function determineNextShape(){
 	buildNextPieceContainer();
 }
 
+function buildIShape(){
+	gameLayout[0][4] = 1;
+	gameLayout[1][4] = 1;
+	gameLayout[2][4] = 1;
+	gameLayout[3][4] = 1;
+}
+
+function buildJShape(){
+	gameLayout[0][3] = 2;
+	gameLayout[1][3] = 2;
+	gameLayout[1][4] = 2;
+	gameLayout[1][5] = 2;
+}
+
+function buildLShape(){
+	gameLayout[0][5] = 3;
+	gameLayout[1][3] = 3;
+	gameLayout[1][4] = 3;
+	gameLayout[1][5] = 3;
+}
+
+function buildOShape(){
+	gameLayout[0][4] = 4;
+	gameLayout[0][5] = 4;
+	gameLayout[1][4] = 4;
+	gameLayout[1][5] = 4;
+}
+
+function buildSShape(){
+	gameLayout[0][4] = 5;
+	gameLayout[0][5] = 5;
+	gameLayout[1][3] = 5;
+	gameLayout[1][4] = 5;
+}
+
+function buildTShape(){
+	gameLayout[0][5] = 6;
+	gameLayout[1][4] = 6;
+	gameLayout[1][5] = 6;
+	gameLayout[1][6] = 6;
+}
+
+function buildZShape(){
+	gameLayout[0][3] = 7;
+	gameLayout[0][4] = 7;
+	gameLayout[1][4] = 7;
+	gameLayout[1][5] = 7;
+}
+
 function createNewShape(){
 	position = 1;
 	switch(nextShape){
 		case 0: //I
-			gameLayout[0][4] = 1;
-			gameLayout[1][4] = 1;
-			gameLayout[2][4] = 1;
-			gameLayout[3][4] = 1;
+			if(gameLayout[0][4]==0 && gameLayout[1][4]==0 && gameLayout[2][4]==0 && gameLayout[3][4]==0){
+				buildIShape();
+			} else {
+				buildIShape();
+				pause();
+			}
 			break;
 		case 1: //J
-			gameLayout[0][3] = 2;
-			gameLayout[1][3] = 2;
-			gameLayout[1][4] = 2;
-			gameLayout[1][5] = 2;
+			if(gameLayout[0][3]==0 && gameLayout[1][3]==0 && gameLayout[1][4]==0 &&gameLayout[1][5]==0){
+				buildJShape();
+			} else {
+				builJShape();
+				pause();
+			}
 			break;
 		case 2: //L
-			gameLayout[0][5] = 3;
-			gameLayout[1][3] = 3;
-			gameLayout[1][4] = 3;
-			gameLayout[1][5] = 3;
+			if(gameLayout[0][5]==0 && gameLayout[1][3]==0 && gameLayout[1][4]==0 && gameLayout[1][5]==0){
+				buildLShape();
+			} else {
+				buildLShape();
+				pause;
+			}
 			break;
 		case 3: //O
-			gameLayout[0][4] = 4;
-			gameLayout[0][5] = 4;
-			gameLayout[1][4] = 4;
-			gameLayout[1][5] = 4;
+			if(gameLayout[0][4]==0 && gameLayout[0][5]==0 && gameLayout[1][4]==0 && gameLayout[1][5]==0){
+				buildOShape();
+			} else {
+				buildOShape();
+				pause();
+			}
 			break;
 		case 4: //S
-			gameLayout[0][4] = 5;
-			gameLayout[0][5] = 5;
-			gameLayout[1][3] = 5;
-			gameLayout[1][4] = 5;
+			if(gameLayout[0][4]==0 && gameLayout[0][5]==0 && gameLayout[1][3]==0 && gameLayout[1][4]==0){
+				buildSShape();
+			} else {
+				buildSShape();
+				pause();
+			}
 			break;
 		case 5: //T
-			gameLayout[0][5] = 6;
-			gameLayout[1][4] = 6;
-			gameLayout[1][5] = 6;
-			gameLayout[1][6] = 6;
+			if(gameLayout[0][5]==0 && gameLayout[1][4]==0 && gameLayout[1][5]==0 && gameLayout[1][6]==0){
+				buildTShape();
+			} else {
+				buildTShape();
+				pause();
+			}
 			break;
 		case 6: //Z
-			gameLayout[0][3] = 7;
-			gameLayout[0][4] = 7;
-			gameLayout[1][4] = 7;
-			gameLayout[1][5] = 7;
+			if(gameLayout[0][3]==0 && gameLayout[0][4]==0 && gameLayout[1][4]==0 && gameLayout[1][5]==0){
+				buildZShape();
+			} else {
+				buildZShape();
+				pause();
+			}
 			break;
 	}
 	determineNextShape();
@@ -554,7 +617,7 @@ function canTheBoxMove(){
 			}
 		}
 	}
-	return canMoveDown;
+	// return canMoveDown;
 }
 
 function moveDown(){
@@ -673,7 +736,7 @@ function newGame(){
 		[0,0,0,0,0,0,0,0,0,0],
 		[0,0,0,0,0,0,0,0,0,0],
 		[0,0,0,0,0,0,0,0,0,0],
-		[0,0,0,0,0,0,0,0,0,0]
+		// [0,0,0,0,0,0,0,0,0,0]
 	];
 
 	score = 0;
